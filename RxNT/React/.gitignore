@@ -25,8 +25,3 @@ node_modules
 
 # OSX Folder Attributes
 .DS_Store
-
-# JS, css, and map files
-*.js
-*.css
-*.map
