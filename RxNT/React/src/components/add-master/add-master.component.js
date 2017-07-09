@@ -33,6 +33,9 @@ class AddMasterComponent extends Component{
                 <div className="col-md-4 col-sm-4 col-xs-4">
                   <input type="text" placeholder="Enter Patient Name" />
                 </div>
+                <div className="col-md-4 col-sm-4 col-xs-4">
+                  <input type="email" placeholder="Enter Patient Email Address" />
+                </div>
               </div>
             </div>
         </div>
