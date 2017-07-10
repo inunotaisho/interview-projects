@@ -10,6 +10,7 @@ export default function addMasterReducer(state = initialState, action = {}) {
           data: []
       };
       case types.COMPONENTS_SAMPLE_PAGE_2_LOAD_SUCCESS:
+      console.log('data inside reduce', action);
         return {
           ...state,
           loading: false,

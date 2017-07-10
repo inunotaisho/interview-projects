@@ -39,4 +39,4 @@ export default [
         name: 'Test, Grays8',
         email: 'test8@gmail.com'
     }
-];
+];undefinedundefinedundefinedundefined

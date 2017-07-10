@@ -13,17 +13,15 @@ class AddMasterComponent extends Component{
   constructor(props) {
     super(props);
 
-    this.submitData = this.submitData;
+    this.submitData = this.submitData.bind(this);
   }
 
-  submitData(name, email) {
+  submitData(e) {
 		e.preventDefault();
-		this.props.AddMasterComponent('y name', 'my email')
-	}
 
-  componentWillMount() {
-    this.props.actions.addMaster();
-  }
+    console.log('this.refsdgdf', this.refs)
+		this.props.actions.addMaster(this.refs.name.value, this.refs.email.value);
+	}
 
   render(){
     return(
@@ -50,10 +48,10 @@ class AddMasterComponent extends Component{
               {this.props.loading && <SpinnerComponent/>}
               <div className="row">
                 <div className="col-md-offset-1 col-md-4 col-sm-offset-1 col-sm-4 col-xs-offset-1 col-xs-4">
-                  <input type="text" placeholder="Enter Patient Name" />
+                  <input type="text" ref="name" placeholder="Enter Patient Name" />
                 </div>
                 <div className="col-md-4 col-sm-4 col-xs-4">
-                  <input type="email" placeholder="Enter Patient Email Address" />
+                  <input type="email" ref="email" placeholder="Enter Patient Email Address" />
                 </div>
               </div>
             </div>
@@ -61,8 +59,8 @@ class AddMasterComponent extends Component{
 					<div className="row">
 						<div className="col-md-12 col-sm-12 col-xs-12 tdTopAlign">
 								<div className="pull-right mainHeaderButtons">
-									<button className="btnAllYellow pull-right" onClick={this.submitData}>Cancel</button>
-									<button className="btnAllGreen pull-right" >Save</button>
+									<button className="btnAllYellow pull-right">Cancel</button>
+									<button className="btnAllGreen pull-right" onClick={this.submitData} >Save</button>
 								</div>
 						</div>
 					</div>
