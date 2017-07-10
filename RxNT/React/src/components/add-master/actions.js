@@ -1,7 +1,7 @@
 import * as types from './constants';
 
 
-export function load() {
+export function addMaster() {
   return function (dispatch) {
     dispatch({
       type: types.COMPONENTS_SAMPLE_PAGE_2_SPINNER_START

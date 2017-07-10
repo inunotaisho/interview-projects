@@ -10,7 +10,7 @@ import TopNavComponent from '../uicomponents/menu/topnav.component';
 import SideNavLeftComponent from '../uicomponents/menu/sidenav-left.component';
 import SideNavRightComponent from '../uicomponents/menu/sidenav-right.component';
 import SearchMasterContainerComponent from './search-master/search-master.component';
-import AddMasterContainerComponent from './add-master/add-master.component';
+import AddMasterContainerComponent from '../components/add-master/add-master.component';
 import VersionMismatchComponent from './partials/version-mismatch.component';
 import * as appActions from './actions';
 import appConfig from '../app.config';
