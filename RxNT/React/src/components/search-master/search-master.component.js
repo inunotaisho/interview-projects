@@ -55,7 +55,7 @@ class SearchMasterComponent extends Component{
             <div className="table">
                 <div className="row">
                     <div className="col-md-4">
-                        <h4>Search Master</h4>
+                        <h4>Search Patients</h4>
                     </div>
                 </div>
             </div>
