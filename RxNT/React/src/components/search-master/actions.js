@@ -9,7 +9,7 @@ export function load() {
 
     let data;
 
-    axios.get('http://localhost:4001/read-all')
+    axios.get('http://localhost:4001/patients')
       .then(res => {
         console.log('qqqqqqq', typeof res.data)
         dispatch({

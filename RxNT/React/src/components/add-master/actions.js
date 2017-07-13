@@ -16,7 +16,7 @@ export function addMaster(name, email) {
       email
     };
 
-    axios.post('http://localhost:4001/write', data)
+    axios.post('http://localhost:4001/patients', data)
       .then(res => console.log('then hook', res))
       .catch(err => console.log('catch hook', err));
 

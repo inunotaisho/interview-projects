@@ -1,20 +1,21 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-import {Link} from 'react-router-dom';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { Link } from 'react-router-dom';
 
 import * as samplePage1Actions from './actions';
-import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 import SpinnerComponent from '../../uicomponents/spinner/spinner.component';
 import './search-master.component.scss';
 
-class SearchMasterComponent extends Component{
+class SearchMasterComponent extends Component {
 
   constructor(props) {
     super(props);
     this.navigateToDetails = this.navigateToDetails.bind(this);
     this.IdFormatter = this.IdFormatter.bind(this);
+    this.deletePatient = this.deletePatient.bind(this);
   }
 
   componentWillMount() {
@@ -22,54 +23,72 @@ class SearchMasterComponent extends Component{
   }
 
   navigateToDetails() {
-      alert('Developement in progress');
+    alert('Developement in progress');
   }
 
   IdFormatter(cell, row) { // eslint-disable-line no-unused-vars
-   return (
-     <Link to="/new">{cell}</Link>
-   );
- }
+    return (
+      <Link to="/new">{cell}</Link>
+    );
+  }
 
-  render(){
+  deletePatient(e) { 
+    e.preventDefault();
+    axios.delete('http://localhost:4001/patients/2')
+      .then(() => alert('deleted'))
+      .catch(() => alert('some err'));
+
+  }
+
+  editPatient(cell, row) {
+    return <Link to="/new" className="glyphicon glyphicon-edit" ></Link>;
+  }
+  removePatient(cell, row){
+    return <Link onClick={this.deletePatient} to="/new" className="glyphicon glyphicon-remove" ></Link>;
+  }
+
+
+  render() {
 
     let selectRowProp = {
-                          mode: "checkbox",
-                          bgColor: "#CAE1FF"
-                        };
+      mode: "checkbox",
+      bgColor: "#CAE1FF"
+    };
 
     const options = {
-                      page: 1,  // which page you want to show as default
-                      sizePerPageList: [ 5, 10, 20 ], // you can change the dropdown list for size per page
-                      sizePerPage: 5,  // which size per page you want to locate as default
-                      pageStartIndex: 1, // where to start counting the pages
-                      paginationSize: 5,  // the pagination bar size.
-                      prePage: "<", // Previous page button text
-                      nextPage: ">", // Next page button text
-                      firstPage: "<<", // First page button text
-                      lastPage: ">>", // Last page button text
-                    };
+      page: 1,  // which page you want to show as default
+      sizePerPageList: [5, 10, 20], // you can change the dropdown list for size per page
+      sizePerPage: 5,  // which size per page you want to locate as default
+      pageStartIndex: 1, // where to start counting the pages
+      paginationSize: 5,  // the pagination bar size.
+      prePage: "<", // Previous page button text
+      nextPage: ">", // Next page button text
+      firstPage: "<<", // First page button text
+      lastPage: ">>", // Last page button text
+    };
 
-    return(
-        <div>
-            <div className="table">
-                <div className="row">
-                    <div className="col-md-4">
-                        <h4>Search Patients</h4>
-                    </div>
-                </div>
+    return (
+      <div>
+        <div className="table">
+          <div className="row">
+            <div className="col-md-4">
+              <h4>Search Patients</h4>
             </div>
-            <div className="table tab-content">
-              {this.props.loading && <SpinnerComponent/>}
-              <div className="row">
-                <BootstrapTable selectRow={selectRowProp} minHeight="300px" data={this.props.data} pagination={true} options={options}>
-                    <TableHeaderColumn dataField="id" dataFormat={this.IdFormatter} headerAlign="center" editable={false} isKey ={true} dataSort={true} >Id</TableHeaderColumn>
-                    <TableHeaderColumn dataField="name" headerAlign="center" editable={false} filter={{type: 'TextFilter', delay: 50}} >Name</TableHeaderColumn>
-                    <TableHeaderColumn dataField="email" headerAlign="center" editable={false}  >Email</TableHeaderColumn>
-                </BootstrapTable>
-              </div>
-            </div>
+          </div>
         </div>
+        <div className="table tab-content">
+          {this.props.loading && <SpinnerComponent />}
+          <div className="row">
+            <BootstrapTable selectRow={selectRowProp} minHeight="300px" data={this.props.data} pagination={true} options={options}>
+              <TableHeaderColumn dataField="id" headerAlign="center" editable={false} isKey dataSort >Id</TableHeaderColumn>
+              <TableHeaderColumn dataField="name" headerAlign="center" editable={false} filter={{ type: 'TextFilter', delay: 50 }} >Name</TableHeaderColumn>
+              <TableHeaderColumn dataField="email" headerAlign="center" editable={false}  >Email</TableHeaderColumn>
+              <TableHeaderColumn dataField="id" dataFormat={this.editPatient} width="30" headerAlign="center" editable={false} ></TableHeaderColumn>
+              <TableHeaderColumn dataField="id" dataFormat={this.removePatient} width="30" headerAlign="center" editable={false} ></TableHeaderColumn>
+            </BootstrapTable>
+          </div>
+        </div>
+      </div>
     );
   }
 }
@@ -81,7 +100,7 @@ SearchMasterComponent.propTypes = {
 };
 
 SearchMasterComponent.contextTypes = {
-    router: PropTypes.object.isRequired
+  router: PropTypes.object.isRequired
 };
 
 const mapStateToProps = (state) => {
@@ -98,3 +117,6 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchMasterComponent);
+
+
+//<TableHeaderColumn dataField="id" dataFormat={this.IdFormatter} headerAlign="center" editable={false} isKey ={true} dataSort={true} >Id</TableHeaderColumn>                    

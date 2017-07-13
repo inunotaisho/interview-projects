@@ -59,25 +59,46 @@ app.get('/patients', (req, res) => {
 app.put('/patients/:id', (req, res) => {
     console.log('body shits', req.body, 'sfsds', req.params, 'query shits', req.query);
 
-        fs.readFile(path.resolve(__dirname + './../data-store/data.json'), 'utf8', (err, data) => {
-            const allData = JSON.parse(data);
-            allData.filter(x => x.id === req.body.id);
+    fs.readFile(path.resolve(__dirname + './../data-store/data.json'), 'utf8', (err, data) => {
+        const allData = JSON.parse(data);
+        const newData = allData.filter(x => x.id == req.params.id)[0];
+        if (!newData) {
+            return res.send({ Error: 'Patient data does not exist' });
+        };
+        const anything = {};
 
-            fs.writeFile(path.resolve(__dirname + './../data-store/data.json'), JSON.stringify(allData), (err, data) =>{
-                const 
-                req.query()
-            });
-        })
-    res.end();
+        if (req.body.name && req.body.name !== newData.name) {
+            anything['name'] = req.body.name;
+        } else {
+            anything['name'] = newData.name;
+        }
+
+        if (req.body.email && req.body.email !== newData.email) {
+            anything['email'] = req.body.email
+        } else {
+            anything['email'] = newData.email;
+        }
+        anything['id'] = parseInt(req.params.id);
+
+        const i = allData.indexOf(newData);
+        allData[i] = anything;
+
+
+
+        fs.writeFile(path.resolve(__dirname + './../data-store/data.json'), JSON.stringify(allData), (err) => {
+            res.send(allData);
+        });
+    })
+    //    res.end();
 });
 
 app.delete('/patients/:id', (req, res, next) => {
     fs.readFile(path.resolve(__dirname + './../data-store/data.json'), 'utf8', (err, data) => {
         const allData = JSON.parse(data);
-        allData.filter(x => x.id === req.body.id);
+        const newData = allData.filter(x => x.id != req.params.id);
 
-        fs.writeFile(path.resolve('./../data-store/data.json'), JSON.stringify(allData), (err, data) =>{
-
+        fs.writeFile(path.resolve(__dirname + './../data-store/data.json'), JSON.stringify(newData), (err) => {
+            res.send(newData);
         });
     });
 })

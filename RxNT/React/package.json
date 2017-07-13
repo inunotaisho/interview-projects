@@ -53,6 +53,7 @@
     "cldr-data": "31.0.2",
     "es6-promise": "4.1.0",
     "express": "4.15.3",
+    "font-awesome": "^4.7.0",
     "fs": "0.0.1-security",
     "globalize": "1.2.3",
     "install": "0.10.1",
