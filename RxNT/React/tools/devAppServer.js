@@ -61,17 +61,26 @@ app.put('/patients/:id', (req, res) => {
 
         fs.readFile(path.resolve(__dirname + './../data-store/data.json'), 'utf8', (err, data) => {
             const allData = JSON.parse(data);
-            const reqBody = req.body;
-            allData.forEach((item) => {
-                
+            allData.filter(x => x.id === req.body.id);
+
+            fs.writeFile(path.resolve(__dirname + './../data-store/data.json'), JSON.stringify(allData), (err, data) =>{
+                const 
+                req.query()
             });
         })
-       fs.writeFile(path.resolve(__dirname + './../data-store/data.json'), 'utf8', (err, data) =>{
-           const 
-           req.query()
-       });
     res.end();
 });
+
+app.delete('/patients/:id', (req, res, next) => {
+    fs.readFile(path.resolve(__dirname + './../data-store/data.json'), 'utf8', (err, data) => {
+        const allData = JSON.parse(data);
+        allData.filter(x => x.id === req.body.id);
+
+        fs.writeFile(path.resolve('./../data-store/data.json'), JSON.stringify(allData), (err, data) =>{
+
+        });
+    });
+})
 
 app.listen(4001, () => console.log('Api server started at 4001'));
 
