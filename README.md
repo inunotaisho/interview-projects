@@ -5,3 +5,5 @@ This repository is for seed project I have been given by potential employers to 
 **Frameworks used so far**
 <ul>
     <li>[ReactJS](https://facebook.github.io/react/)</li>
+    <li>[Redux](http://redux.js.org/)</li>
+</ul>
