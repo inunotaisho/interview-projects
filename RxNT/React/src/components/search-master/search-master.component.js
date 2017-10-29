@@ -34,7 +34,13 @@ class SearchMasterComponent extends Component {
 
   deletePatient(e) { 
     e.preventDefault();
-    axios.delete('http://localhost:4001/patients/2')
+    axios.delete('http://localhost:4001/patients/2', (req, res) =>{
+      if('http://localhost:4001/patients/2' == res.params){
+        console.log("works");
+      } else {
+        console.log("error occurred")
+      }
+    })
       .then(() => alert('deleted'))
       .catch(() => alert('some err'));
 
