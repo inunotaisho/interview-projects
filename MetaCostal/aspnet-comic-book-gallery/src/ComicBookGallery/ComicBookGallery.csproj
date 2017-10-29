@@ -74,6 +74,21 @@
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
     <Content Include="Views\ComicBooks\Detail.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\site.css" />
+    <Content Include="Fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Images\bone-50.jpg" />
+    <Content Include="Images\the-amazing-spider-man-657.jpg" />
+    <Content Include="Images\the-amazing-spider-man-700.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -81,6 +96,9 @@
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ComicBooksController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
