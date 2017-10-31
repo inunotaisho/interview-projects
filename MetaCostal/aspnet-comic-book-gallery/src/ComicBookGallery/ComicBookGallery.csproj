@@ -67,6 +67,7 @@
     <Folder Include="Models\" />
     <Folder Include="Scripts\" />
     <Folder Include="Views\ComicBooks\" />
+    <Folder Include="Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
@@ -98,6 +99,7 @@
     <Compile Include="Controllers\ComicBooksController.cs" />
     <Compile Include="Models\ComicBook.cs" />
     <Compile Include="Models\Artist.cs" />
+    <Compile Include="Data\ComicBookRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\jquery-1.10.2.min.map" />
