@@ -96,6 +96,8 @@
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ComicBooksController.cs" />
+    <Compile Include="Models\ComicBook.cs" />
+    <Compile Include="Models\Artist.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\jquery-1.10.2.min.map" />
