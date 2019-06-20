@@ -25,6 +25,7 @@ node_modules
 
 # OSX Folder Attributes
 .DS_Store
+**/DS_Store
 releasedist
 
 ## Ignore Visual Studio temporary files, build results, and
