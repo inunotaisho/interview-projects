@@ -9,10 +9,11 @@ import officeinput from '../offices/offices.dir.js';
 import dealinput from "../dealType/deal-type.dir.js";
 import contactinput from '../contactName/contact-name.dir.js';
 import emailinput from '../email/email.dir.js';
+import sellertable from '../sellerTable/seller-table.dir.js'
 import layoutTemplate from './layout.html';
 
 
-angular.module('myApp', ['ngRoute', 'ngResource', 'nameinput', 'currency', 'officeinput', 'dealinput', 'contactinput', 'emailinput'])
+angular.module('myApp', ['ngRoute', 'ngResource', 'nameinput', 'currency', 'officeinput', 'dealinput', 'contactinput', 'emailinput', 'sellertable'])
     .config(['$routeProvider', '$locationProvider', ($routeProvider, $locationProvider) => {
         $routeProvider
             .when('/', {
