@@ -1,0 +1,42 @@
+{
+  "name": "amobee",
+  "version": "1.0.0",
+  "description": "\"requested amobee miniproject\"",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "clean": "rimraf public/*",
+    "bundle": "webpack --config webpack.config.js",
+    "start": "concurrently -r \"npm run clean\" \"npm run bundle\" \"nodemon ./lib/app.js\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.8",
+    "angular-resource": "^1.7.8",
+    "angular-route": "^1.7.8",
+    "bootstrap": "^4.3.1",
+    "bunyan": "^1.8.12",
+    "bunyan-blackhole": "^1.1.1",
+    "bunyan-middleware": "^0.8.0",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "webpack": "^4.36.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "circular-dependency-plugin": "^5.0.2",
+    "concurrently": "^4.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "nodemon": "^1.19.1",
+    "raw-loader": "^3.1.0",
+    "rimraf": "^2.6.3",
+    "webpack-cli": "^3.3.6",
+    "webpack-hot-middleware": "^2.25.0"
+  }
+}
