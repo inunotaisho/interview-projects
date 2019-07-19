@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .head-banner {
+            width: 100%;
+            background-image: url("https://d13p2xj50zkyqm.cloudfront.net/promos/health/GLN/masterswitch_chocolateRL_ihtml_0317/HeadlineImage_1.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .head-banner h3 {
+            font-size: 56px;
+            color: white;
+            margin-bottom: 10px;
+            font-family: 'Open Sans Condensed', sans-serif;
+        }
+
+        .head-banner p {
+            font-size: 56px;
+            color: white;
+            margin-bottom: 10px;
+            font-family: 'Open Sans Condensed', sans-serif;
+        }
+
+        .head-banner h1 {
+            font-size: 96px;
+            background-color: white;
+            color: #bb232e;
+            padding: 10px 0;
+            background-image: linear-gradient(to right, #684139, white, #684139);
+            font-family: 'Open Sans Condensed', sans-serif;
+        }
+
+        .banner {
+            width: 100%;
+            background-color: #c39b7c;
+            padding: 15px 0;
+            background-image: linear-gradient(to right, #ffffff, #c39b7c, #ffffff);
+        }
+
+        #special-1 {
+            font-size: 25px;
+            padding: 25px 0;
+        }
+
+        #special-1 p {
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .banner h5 {
+            text-align: center;
+            font-size: 22px;
+            color: brown;
+        }
+
+        .spacing {
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .image-bundle {
+            display: inline-block;
+            width: 30%;
+            margin: 1.5%;
+        }
+
+
+        .parallax {
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            width: 100%;
+            background-image: url("https://d13p2xj50zkyqm.cloudfront.net/promos/health/GLN/masterswitch_chocolateRL_ihtml_0317/ParallaxOne_5.jpg");
+        }
+
+        .parallax div h3 {
+            font-size:25pt;
+            color: white;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .parallax div p {
+            font-size: 25pt;
+            color: white;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .parallax div {
+
+        }
+
+        .gears p {
+            font-size: 15pt;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .gears h3 {
+            font-size: 32px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .gears {
+            width: 100%;
+            background-color: #9f212d;
+            background-image: url("https://d13p2xj50zkyqm.cloudfront.net/promos/health/GLN/masterswitch_chocolateRL_ihtml_0317/Gears_15.jpg");
+            background-position: right top;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .gears div {
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .gears div h3 {
+            color: #edb11a;
+            margin: 20px 0;
+            font-family: 'Open Sans', sans-serif;
+
+        }
+
+        .gears div p {
+            color: white;
+            margin: 20px 0;
+            font-family: 'Open Sans', sans-serif;
+
+        }
+
+        .box-center {
+            margin: 0 auto;
+            max-width: 1000px;
+            width: 100%;
+            padding: 20px 0;
+        }
+
+        /* .box-center p {
+            margin: 20px 0;
+            font-size: 25px;
+            font-family: 'Open Sans', sans-serif;
+        } */
+
+        .box-center ul li {
+            margin: 20px 0;
+            list-style: none;
+            font-size: 22px;
+        }
+
+        .box-center i {
+            margin-right: 5px;
+        }
+
+        .box-center h1 {
+            font-size: 36px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        #guarantee {
+            margin-top: 75px;
+            margin-bottom: 35px;
+        }
+
+        #satifaction {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 65%;
+        }
+
+        .cover-image {
+            background-size: cover;
+            width: 100%;
+            background-image: url("https://d13p2xj50zkyqm.cloudfront.net/promos/health/GLN/masterswitch_chocolateRL_ihtml_0317/TransparentArrowBkgd.jpg");
+        }
+
+        .offset-box-left {
+            background-color: #3d1c0f;
+            width: 100%;
+            max-width: 1200px;
+            height: 340px;
+        }
+
+        .offset-box-left ul li {
+            list-style: none;
+            float: left;
+            width: 44%;
+            margin: 0 3%;
+        }
+
+        .offset-box-left ul li p {
+            color: white;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .offset-box-left img {
+            margin-top: -20px;
+            margin-bottom: -20px;
+        }
+
+        .offset-banner {
+            padding: 50px 0;
+        }
+
+        .offset-banner ul li img {
+            margin-top: -40px;
+        }
+
+        .offset-box-right {
+            width: 100%;
+            max-height: 1200px;
+        }
+
+        .offset-box-right p{
+            font-size: 25px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .white {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+        }
+
+        .addItem {
+            background-color: orange;
+            padding: 20px 70px;
+            border: 5px solid white;
+        }
+
+        .addItem h2 {
+            font-size: 50px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .addItem p {
+            font-size: 15px;
+        }
+
+        .btnClass {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .float-right {
+            float: right;
+        }
+
+        .lower-font {
+            font-size: 25px;
+            padding: 15px 0;
+        }
+
+        .lower-font p {
+            padding: 15px 0;
+        }
+        .upper-font {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 25px;
+            padding: 0 70px;
+            list-style: none;
+        }
+
+        .upper-font p {
+            padding: 15px 0;
+        }
+
+        .upper-font ul {
+            list-style: none;
+            padding: 10px 0;
+        }
+        .upper-font ul li{
+            padding: 10px 0;
+        }
+        .parallax div.upper-font {
+            padding: 20px;
+        }
+
+        .parallax div.upper-font h3{
+            padding: 20px;
+        }
+
+
+        @media (max-width: 700px) {
+            .image-bundle {
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+            }
+
+            .spacing {
+                text-align: center;
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .offset-box-left {
+                text-align: center;
+            }
+
+            .offset-box-left img {
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Headline Text -->
+    <section class="head-banner">
+        <header>
+            <h3>COULD THE SECRET FOR</h3>
+            <h1>PERFECT BLOOD SUGAR</h1>
+            <p>HAVE BEEN DISCOVERED IN</p>
+            <p>DELICIOUS... GOOEY... <i>CHOCOLATE?</i></p>
+
+        </header>
+    </section>
+    <!-- / Headline Text -->
+
+
+    <!-- section 1 text -->
+    <section>
+        <div id="special-1">
+            <p>Could the secret for <i>perfect</i> blood sugar have been discovered in...</p>
+        </div>
+        <div class="banner">
+            <div class="spacing">
+                <div class="image-bundle">
+                    <img
+                        src="https://d13p2xj50zkyqm.cloudfront.net/promos/health/GLN/masterswitch_chocolateRL_ihtml_0317/DeliciousImg_2.png" />
+                    <h5>Delicious...</h5>
+                </div>
+                <div class="image-bundle">
+                    <img
+                        src="https://d13p2xj50zkyqm.cloudfront.net/promos/health/GLN/masterswitch_chocolateRL_ihtml_0317/GooeyImg_3.png" />
+                    <h5>Gooey...</h5>
+                </div>
+                <div class="image-bundle">
+                    <img
+                        src="https://d13p2xj50zkyqm.cloudfront.net/promos/health/GLN/masterswitch_chocolateRL_ihtml_0317/ChocolateImg_4.png" />
+                    <h5>Chocolate...</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="upper-font">
+            <p>According to a recent animal study published in the European Journal of Lipid
+                Science and Technology, the
+                answer
+                is
+                yes!</p>
+
+            <p>Here’s how:</p>
+
+            <p>Scientists have discovered keeping your blood sugar healthy boils down to a simple
+                enzyme in your body.</p>
+
+            <p>If this enzyme is shut down, that leads to…</p>
+            <ul>
+                <li><i class="fas fa-check"></i> Concerning <b>insulin levels…</b></li>
+                <li><i class="fas fa-check"></i> Struggling to keep your <b>HbA1c</b> in the normal range…</li>
+                <li><i class="fas fa-check"></i> Or frustration with your <b>belly fat</b> and <b>fatigue…</b></li>
+            </ul>
+            <p>On the other hand, if this enzyme is active in your body…</p>
+        </div>
+    </section>
+    <!-- /  section 1 text -->
+
+    <!-- parallax section text -->
+    <section class="parallax">
+        <div class="box-center upper-font">
+
+            <h3>You can have PERFECT blood sugar,every time you check…</h3>
+            <p>You’ll marvel at your steady, low, natural insulin levels…</p>
+        </div>
+    </section>
+    <!-- / parallax section text -->
+
+    <!--  brown bar section text -->
+    <section class="offset-banner">
+        <div class="offset-box-left lower-font">
+            <ul>
+                <li><img
+                        src="https://d13p2xj50zkyqm.cloudfront.net/promos_/health/GLN/masterswitch_chocolateRL_ihtml_0317/DoctorAndLady_6.png" />
+                </li>
+                <li>
+                    <p>You might even get a thumbs up from your doctor, after confirming your HbA1c is the best it’s
+                        been in
+                        years…</p>
+                    <p>And also hear from your doctor that whatever you’ve been doing to lose those extra pounds: “Keep
+                        it up,
+                        because it’s
+                        working like crazy!”</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- / brown bar section text -->
+
+        <!-- between brown and red -->
+        <div class="box-center lower-font">
+            <p>So what does this have to do with eating chocolate?</p>
+
+            <p>Simple… it turns out you can activate this enzyme by eating chocolate! Seriously!</p>
+
+            <p>If you’re skeptical, I completely understand. <b>And why wouldn’t you be?</b></p>
+
+            <p>After all, if you’re concerned about your blood sugar… everyone out there is telling you something
+                different…</p>
+        </div>
+    </section>
+    <!-- / between brown and red -->
+
+    <!-- Red Section -->
+    <section>
+        <div class="gears">
+            <div class="box-center">
+                <h3>You CAN now switch it back on.</h3>
+
+                <p>Even if you’re tired, out of shape, and have poor eating habits.</p>
+
+                <p>Your age doesn’t matter, either.</p>
+
+                <p>And when you do flip your AMPK on, you won’t believe the results…</p>
+
+                <p>You can keep your blood sugar healthy and stay sensitive to your natural insulin… so you can feel
+                    steady
+                    energy,
+                    look thin and trim…</p>
+
+                <p>...and stop stressing… because you know your numbers are in the normal range.</p>
+
+                <p>And the most incredible part is, it’s simpler than you think.</p>
+
+                <p>You can do this right in the comfort of your own home…</p>
+            </div>
+        </div>
+    </section>
+    <!-- / Red Section -->
+    <section>
+        <div id="guarantee">
+            <img id="satifaction"
+                src="https://d13p2xj50zkyqm.cloudfront.net/promos/health/GLN/masterswitch_chocolateRL_ihtml_0317/BerbinexGuarantee_36.jpg" />
+        </div>
+    </section>
+
+    <!--  Last Section -->
+    <section class="cover-image">
+        <div class="box-center white lower-font">
+            <p>Let me repeat that… for any reason at all, simply request a refund and we’ll be happy to oblige.</p>
+
+            <h1>And your guarantee NEVER expires.</h1>
+
+            <p>You can request a refund any time in the future – it could be six months from now… a year… or even two!
+            </p>
+
+            <p>This way, there’s no pressure… and no risk… when you try Berbinex C3 today.</p>
+
+            <div class="offset-box-right">
+                <img class="float-right"
+                    src="https://d13p2xj50zkyqm.cloudfront.net/promos/health/GLN/masterswitch_chocolateRL_ihtml_0317/DeliveryMan_37.jpg" />
+                <p>So let’s do this: Fill out your shipping information on the next page.</p>
+
+                <p>Once you do, we’ll begin packing your shipment of Berbinex C3 and then we’ll rush it your
+                    way.
+                </p>
+
+                <p>Just a few short days from now, you’ll receive a plain, brown box from USPS.</p>
+
+                <p>Carefully packed inside will be your initial supply of Berbinex C3.</p>
+
+
+                <p>I recommend you immediately bring your Berbinex C3 supply into your kitchen, open it up…</p>
+
+                <p>…and have it ready before your very next meal.</p>
+
+                <p>As you eat, the ingredients inside Berbinex C3 will begin working with your blood cells and
+                    muscles...
+                </p>
+
+            </div>
+
+            <p class="lower-font">And before you know it…</p>
+
+            <p class="lower-font">Your AMPK will be activated, keeping your blood sugar perfect, and keeping YOU HEALTHY.</p>
+            <div class="box-center lower-font">
+                <p>As time goes on, you’ll feel the effects all day long and see the changes in your mirror.</p>
+
+                <p>You’ll even ask yourself, “How did I ever live without Berbinex C3?”</p>
+
+                <p>And that’s an important question… so we want to make sure you’re never without the blood sugar
+                    balancing
+                    power of
+                    Berbinex C3.</p>
+
+                <p>Because if you stop taking Berbinex C3, there’s a very real chance your Master Metabolic Switch will
+                    turn
+                    right back
+                    off… and then it will all be for nothing.</p>
+
+                <p>So, today, through this special offer, we’re giving you free access to our Priority Pass program.</p>
+
+                <p>That means, whenever you’re about to run out of Berbinex C3, we’ll ship you out a fresh supply and
+                    simply
+                    bill the
+                    credit card you use today.</p>
+
+                <p>Not only that, you lock in today’s special low price. And we’ll even pick up the shipping cost.</p>
+                <div>
+                    ORDER NOW AND RECEIVE
+                    FREE
+                    SHIPPING
+                </div>
+                <div class="box-center lower-font">
+                    <p>That’s right… you get FREE shipping on today’s order and all future Priority Pass orders.</p>
+
+                    <p>Of course, you can cancel or change this program at any time just by calling our friendly team.
+                    </p>
+
+                    <p>No hassle and complete convenience. That’s how we do business.</p>
+
+                    <p>And no matter what, you take no risk at all. Your satisfaction is ALWAYS guaranteed.</p>
+
+                    <p>So if you’re ready for perfect blood sugar levels and a healthy future… go ahead and click the
+                        button
+                        below
+                        now.</p>
+
+                    <p>It will take you to our secure reservation page, where you can select your initial supply of
+                        Berbinex
+                        C3.
+                        You’ll
+                        also find a way you can save a bunch of money…</p>
+
+                    <p>But do click the button now. I’ll see you on the other side… For Berbinex C3 and Gold Leaf
+                        Nutritionals, I’m
+                        Rachel
+                        Roane.</p>
+
+                    <p>Click the button below now to reserve your own supply of Berbinex C3, with berberine, chromium
+                        and
+                        CardiaSlim®.</p>
+                </div>
+            </div>
+        </div>
+        <div class="btnClass">
+            <button class="addItem">
+                <h2>ADD TO CART</h2>
+                <p>YOU CAN REVIEW YOUR ORDER BEFORE IT'S FINAL</p>
+            </button>
+        </div>
+        <div class="box-center">
+            <a>View the Product Label</a>
+        </div>
+
+    </section>
+
+    <!-- / last section -->
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://d13p2xj50zkyqm.cloudfront.net/scripts/countdown.js"></script>
+<script src="https://d13p2xj50zkyqm.cloudfront.net/scripts/moment.js"></script>
+<script src="https://d13p2xj50zkyqm.cloudfront.net/scripts/moment-timezone-with-data.min.js"></script>
+<script>
+    function ePop() {
+    var eventPop = moment.tz("2019-04-29 17:00", "America/New_York");
+    
+       $('.clock').countdown(eventPop.toDate(), function(event) {
+           var t = $(this).html(event.strftime(''
+    
+    + '<div class="small-3 columns inside_timer-box marginright"><div class="blueblue"><p class="big" id="countDays">%d</p></div><div class="lildays"><p>DAYS</p></div></div>'
+    + '<div class="small-3 columns inside_timer-box marginright"><div class="blueblue"><p class="big" id="countDays">%H</p></div><div class="lilhrs"><p>HOURS</p></div></div>'
+    + '<div class="small-3 columns inside_timer-box marginright"><div class="blueblue"><p class="big" id="countDays">%M</p></div><div class="lilmin"><p>MINUTES</p></div></div>'
+    + '<div class="small-3 columns inside_timer-box marginright"><div class="blueblue"><p class="big" id="countDays">%S</p></div><div class="lilsec"><p>SECONDS</p></div></div>')).on('finish.countdown', function (){
+             $('#timerWrap').hide();
+           });
+       });
+    }
+    
+    
+    $(function($){
+        ePop();
+    })
+    
+    </script>
+
+<script>
+    var pop = $('.pop');
+
+    pop.click(function(){
+         $('.shadowarea').fadeIn();
+    });
+
+
+    pop.click(function(){
+             $('.shadowarea').fadeOut();
+
+    });
+
+
+
+</script>
+
+</html>
